@@ -1,0 +1,59 @@
+{
+  "name": "switch-sound-output",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "electron/main.js",
+  "author": "lpre-ys",
+  "description": "Small always-on-top Electron gadget app.",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "electron": "electron .",
+    "electron-clean": "rimraf build",
+    "electron-build": "electron-builder -w",
+    "release": "run-s electron-clean build electron-build"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0",
+    "vue": "^3.5.32",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.5",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^41.2.0",
+    "electron-builder": "^26.8.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.8",
+    "vue-tsc": "^3.2.6",
+    "wait-on": "^9.0.4"
+  },
+  "build": {
+    "appId": "net.lpre-ys.switchsoundoutput",
+    "productName": "SwitchSoundOutput",
+    "files": [
+      "electron/**/*",
+      "dist/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "asset",
+      "output": "build"
+    },
+    "extraFiles": [
+      {
+        "from": "custom",
+        "to": "custom"
+      }
+    ],
+    "win": {
+      "icon": "asset/icon.ico",
+      "target": "zip"
+    }
+  }
+}
