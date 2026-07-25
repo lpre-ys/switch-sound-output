@@ -16,7 +16,7 @@
     "release": "run-s electron-clean build electron-build"
   },
   "dependencies": {
-    "electron-store": "^8.2.0",
+    "electron-store": "^11.0.2",
     "vue": "^3.5.40",
     "vue-router": "^4.6.4"
   },
