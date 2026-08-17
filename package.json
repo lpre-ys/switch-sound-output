@@ -24,7 +24,7 @@
     "@vitejs/plugin-vue": "^6.0.8",
     "concurrently": "^10.0.4",
     "cross-env": "^10.1.0",
-    "electron": "^43.3.0",
+    "electron": "^43.4.0",
     "electron-builder": "^26.15.3",
     "npm-run-all2": "^9.0.3",
     "rimraf": "^6.0.1",
