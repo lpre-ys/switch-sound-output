@@ -22,15 +22,15 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.8",
-    "concurrently": "^10.0.4",
+    "concurrently": "^10.0.5",
     "cross-env": "^10.1.0",
-    "electron": "^43.4.0",
+    "electron": "^43.4.1",
     "electron-builder": "^26.15.3",
     "npm-run-all2": "^9.0.3",
     "rimraf": "^6.0.1",
     "typescript": "^6.0.2",
     "vite": "^8.2.2",
-    "vue-tsc": "^3.3.9",
+    "vue-tsc": "^3.3.10",
     "wait-on": "^9.1.0"
   },
   "build": {
